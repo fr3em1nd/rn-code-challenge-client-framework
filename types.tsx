@@ -24,4 +24,5 @@ export type HomeParamList = {
 export type WeatherParamList = {
   WeatherScreen: undefined;
   Weather: undefined;
+ 
 };
