@@ -15,8 +15,13 @@ const useProxy = Platform.select({web: false, default: true});
 const redirectUri = AuthSession.makeRedirectUri({useProxy});
 
 
-import {storeLoginData, getLoginData} from '../functions/Storage';
+import {storeLoginData, getLoginData, clearData} from '../functions/Storage';
 
+
+interface AUTHRESP {
+  name: string;
+  nickname: string;
+}
 
 
 export default function Hello() {
@@ -38,14 +43,14 @@ export default function Hello() {
 
 
   React.useEffect(() => {
-    const checkLoginData = async () => await getLoginData();
-    checkLoginData().then((loginData)=>{
-      setName(loginData.name);
-    })
-    
- 
 
-  }, []);
+    const checkLogin = async () => getLoginData();
+ 
+    checkLogin().then((loginData) => {
+      console.log("loginData",loginData);
+      setName(loginData.name);
+    });
+  }, [result]);
 
 
   React.useEffect(() => {
@@ -53,9 +58,10 @@ export default function Hello() {
       if (result.type === 'success') {
         // Retrieve the JWT token and decode it
         const jwtToken = result.params.id_token;
-        const decoded = jwtDecode(jwtToken);
-       console.log(decoded);
+        const decoded = jwtDecode<AUTHRESP>(jwtToken);
+      //  console.log(decoded);
        storeLoginData(decoded);
+         setName(decoded?.name);
       }else{
            Alert.alert(
              'Authentication error',
@@ -69,7 +75,7 @@ export default function Hello() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Hello</Text>
+      <Text style={styles.title}>Hello, World!</Text>
       <View
         style={styles.separator}
         lightColor="#eee"
@@ -77,11 +83,22 @@ export default function Hello() {
       />
       <View style={styles.container}>
         {name ? (
-          <Text style={styles.title}>You are logged in! {name}</Text>
+          <View style={styles.subContainer}>
+            <Text style={styles.title}>You are logged as {name}</Text>
+            <Button
+             
+              title="Logout"
+              onPress={() =>
+                clearData().then(() => {
+                  setName('');
+                })
+              }
+            />
+          </View>
         ) : (
           <Button
             disabled={!request}
-            title="Loging using Auth0"
+            title="Login using Auth0"
             onPress={() => promptAsync({useProxy})}
           />
         )}
@@ -93,6 +110,11 @@ export default function Hello() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  subContainer: {
+ 
     alignItems: 'center',
     justifyContent: 'center',
   },

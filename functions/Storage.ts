@@ -12,8 +12,25 @@ export const storeLoginData = async (value: any) => {
 export const getLoginData = async () => {
   try {
     const jsonValue = await AsyncStorage.getItem('@auth0_login');
+
+    console.log(jsonValue != null ? JSON.parse(jsonValue) : null);
     return jsonValue != null ? JSON.parse(jsonValue) : null;
   } catch (e) {
     // error reading value
   }
+};
+
+
+export const clearData = async () => {
+      try {
+         await AsyncStorage.getAllKeys()
+            .then((keys) => AsyncStorage.multiRemove(keys))
+            .then(() => {
+                alert('Logged out');
+            return true;
+        });
+      } catch (e) {
+       //error cleaning
+      }
+
 };
