@@ -19,6 +19,7 @@ export default function Weather({
   const [fetching, setFetching] = useState<boolean>(true);
   const [loggedin, setLoggedin] = React.useState<boolean>(false);
   const isLargeGrid = windowWidth > 414 ? true : false; // i'll consider devices larger than 414width (iphone 8s) to be large grid
+  // const isLargeGrid = true;
   useEffect(() => {
 
         const checkLogin = async () => await getLoginData();

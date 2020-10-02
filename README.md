@@ -15,4 +15,15 @@ Build a simple application with Flutter or React Native and then demonstrate it 
 
 Technoloy used:
 
-- react-native
+- react-native with expo
+
+
+file locations
+
+/api/ - this will store 3rd party api calls
+/functions/ this will store the basic functions in the app
+
+https://www.youtube.com/watch?v=8J_KNY5OFd8
+Here's the full video demo of the code runthrough and actual app demo.
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/8J_KNY5OFd8/0.jpg)](https://www.youtube.com/watch?v=8J_KNY5OFd8)

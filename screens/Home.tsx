@@ -11,6 +11,7 @@ import { RootStackParamList } from '../types';
 
 export default function Home({navigation}: StackScreenProps<RootStackParamList, 'NotFound'>) {
   const [name, setName] = React.useState<String>('');
+  const [githubname, setGithubname] = React.useState<String>('');
   const [loggedin, setLoggedin] = React.useState<boolean>(false);
   const [longtitude, setLongtitude] = React.useState<Number>();
   const [latitude, setLatitude] = React.useState<Number>();
@@ -23,6 +24,7 @@ export default function Home({navigation}: StackScreenProps<RootStackParamList, 
     checkLogin().then((loginData) => {
       if (loginData) {
         setName(loginData.name);
+        setGithubname(loginData.nickname);
         setLoggedin(true);
       }
     });
@@ -49,6 +51,7 @@ export default function Home({navigation}: StackScreenProps<RootStackParamList, 
 
       
       <Text style={styles.title}>Welcome {name}!</Text>
+      <Text style={styles.title}>https://github.com/{githubname}</Text>
       <View
         style={styles.separator}
         lightColor="#eee"
