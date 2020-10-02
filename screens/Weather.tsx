@@ -29,7 +29,7 @@ export default function Weather() {
 
 console.log('window width', windowWidth);
 
-const isLargeGrid = windowWidth>414 ? true: false;
+const isLargeGrid = windowWidth>414 ? true: false; // i'll consider devices larger than 414width (iphone 8s) to be large grid
 
   useEffect(() => {
     Location.requestPermissionsAsync().then((status) => {
@@ -43,7 +43,7 @@ const isLargeGrid = windowWidth>414 ? true: false;
               lati: loc.coords.latitude,
             });
          apiResponse().then((resp)=>{
-           console.log(resp);
+          //cherry picking the data from the API to make sure.
            setTemp(kelvinToFahrenheit(resp.main.temp));
            setHumidity(resp.main.humidity);
            setPressure(resp.main.pressure);
@@ -56,7 +56,6 @@ const isLargeGrid = windowWidth>414 ? true: false;
     });
 
  
-
   }, []);
   return (
     <View style={styles.container}>
