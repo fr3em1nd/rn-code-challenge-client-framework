@@ -5,9 +5,10 @@ import * as React from 'react';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
-import TabOneScreen from '../screens/TabOneScreen';
-import TabTwoScreen from '../screens/TabTwoScreen';
-import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types';
+import Hello from '../screens/Hello';
+import Home from '../screens/Home';
+import Weather from '../screens/Weather';
+import { BottomTabParamList, HelloParamList, HomeParamList,WeatherParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -16,18 +17,25 @@ export default function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="TabOne"
+      initialRouteName="Hello"
       tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
       <BottomTab.Screen
-        name="TabOne"
-        component={TabOneNavigator}
+        name="Hello"
+        component={HelloNavigator}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
         }}
       />
       <BottomTab.Screen
-        name="TabTwo"
-        component={TabTwoNavigator}
+        name="Home"
+        component={HomeNavigator}
+        options={{
+          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Weather"
+        component={WeatherNavigator}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
         }}
@@ -44,30 +52,44 @@ function TabBarIcon(props: { name: string; color: string }) {
 
 // Each tab has its own navigation stack, you can read more about this pattern here:
 // https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
-const TabOneStack = createStackNavigator<TabOneParamList>();
+const HelloStack = createStackNavigator<HelloParamList>();
 
-function TabOneNavigator() {
+function HelloNavigator() {
   return (
-    <TabOneStack.Navigator>
-      <TabOneStack.Screen
-        name="TabOneScreen"
-        component={TabOneScreen}
-        options={{ headerTitle: 'Tab One Title' }}
+    <HelloStack.Navigator>
+      <HelloStack.Screen
+        name="Hello"
+        component={Hello}
+        options={{ headerTitle: 'Hello' }}
       />
-    </TabOneStack.Navigator>
+    </HelloStack.Navigator>
   );
 }
 
-const TabTwoStack = createStackNavigator<TabTwoParamList>();
+const HomeStack = createStackNavigator<HomeParamList>();
 
-function TabTwoNavigator() {
+function HomeNavigator() {
   return (
-    <TabTwoStack.Navigator>
-      <TabTwoStack.Screen
-        name="TabTwoScreen"
-        component={TabTwoScreen}
-        options={{ headerTitle: 'Tab Two Title' }}
+    <HomeStack.Navigator>
+      <HomeStack.Screen
+        name="Home"
+        component={Home}
+        options={{ headerTitle: 'Home' }}
       />
-    </TabTwoStack.Navigator>
+    </HomeStack.Navigator>
+  );
+}
+
+const WeatherStack = createStackNavigator<WeatherParamList>();
+
+function WeatherNavigator() {
+  return (
+    <WeatherStack.Navigator>
+      <WeatherStack.Screen
+        name="Weather"
+        component={Weather}
+        options={{ headerTitle: 'Weather' }}
+      />
+    </WeatherStack.Navigator>
   );
 }
