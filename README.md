@@ -1,6 +1,6 @@
 # rn-code-challenge-client-framework
 Code Challenge | Client Framework
-by Solomon
+by Solomon Monotilla 
 
 This is a code challenge.
  
@@ -18,12 +18,13 @@ Technoloy used:
 - react-native with expo
 
 
-file locations
+File Structure:
 
 /api/ - this will store 3rd party api calls
-/functions/ this will store the basic functions in the app
-
-https://www.youtube.com/watch?v=8J_KNY5OFd8
-Here's the full video demo of the code runthrough and actual app demo.
+/functions/ - this will store the basic functions in the app
+/constants/ - stores the constant and important credentials for the app.
+/hooks/ - color and resource folder
+/screens/ - frontend screens for the app.
+Here's the full video demo the app and code runthrough (https://www.youtube.com/watch?v=8J_KNY5OFd8):
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/8J_KNY5OFd8/0.jpg)](https://www.youtube.com/watch?v=8J_KNY5OFd8)
