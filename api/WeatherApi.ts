@@ -13,7 +13,6 @@ import {WEATHER_API_KEY, WEATHER_ENDPOINT} from '../constants/ApiKeys';
 
  
 export const getWeatherApi = (apiDataLookup:DATALOOKUP) => {
-          
      return fetch(
         WEATHER_ENDPOINT +
       'lon=' +
@@ -25,7 +24,6 @@ export const getWeatherApi = (apiDataLookup:DATALOOKUP) => {
       )
         .then((response) => response.json())
         .then((json) => {
-            // console.log(json);
             return json;
         })
         .catch((error) => console.error(error));
