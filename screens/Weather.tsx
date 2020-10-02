@@ -3,8 +3,7 @@ import {StyleSheet, Dimensions} from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
-import * as Location from 'expo-location';
-import {getWeatherApi} from '../api/WeatherApi';
+import {}
 const kelvinToFahrenheit = require('kelvin-to-fahrenheit');
 const windowWidth = Dimensions.get('window').width;
  
@@ -32,28 +31,14 @@ console.log('window width', windowWidth);
 const isLargeGrid = windowWidth>414 ? true: false; // i'll consider devices larger than 414width (iphone 8s) to be large grid
 
   useEffect(() => {
-    Location.requestPermissionsAsync().then((status) => {
-      console.log('-----testing----');
-      if (!status.granted) {
-        console.log('permission not granted');
-      } else {
-        Location.getCurrentPositionAsync().then((loc) => {
-            const apiResponse =async() =>  await getWeatherApi({
-              longt: loc.coords.longitude,
-              lati: loc.coords.latitude,
-            });
-         apiResponse().then((resp)=>{
-          //cherry picking the data from the API to make sure.
-           setTemp(kelvinToFahrenheit(resp.main.temp));
-           setHumidity(resp.main.humidity);
-           setPressure(resp.main.pressure);
-           setDesc(resp.weather[0].description);
-           setMain(resp.weather[0].main);
-        })
 
-        });
-      }
-    });
+
+
+              //  setTemp(kelvinToFahrenheit(resp.main.temp));
+              //  setHumidity(resp.main.humidity);
+              //  setPressure(resp.main.pressure);
+              //  setDesc(resp.weather[0].description);
+              //  setMain(resp.weather[0].main);
 
  
   }, []);
