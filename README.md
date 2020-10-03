@@ -36,11 +36,13 @@ To test this the latest build and to open with an Android or iOS phone, you can 
 
 
 Android Screenshots:
+
 ![alt text](/showcase/android1.png)
 ![alt text](/showcase/android2.png)
 ![alt text](/showcase/android3.png)
 
-iOS Screenshots
+iOS Screenshots:
+
 ![alt text](/showcase/ios1.jpg)
 ![alt text](/showcase/ios2.jpg)
 ![alt text](/showcase/ios3.jpg)
