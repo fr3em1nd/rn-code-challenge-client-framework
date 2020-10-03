@@ -41,8 +41,8 @@ Android Screenshots:
 ![alt text](/showcase/android3.png)
 
 iOS Screenshots
-![alt text](/showcase/ios1.png)
-![alt text](/showcase/ios2.png)
-![alt text](/showcase/ios3.png)
-![alt text](/showcase/ios4.png)
-![alt text](/showcase/ios5.png)
+![alt text](/showcase/ios1.jpg)
+![alt text](/showcase/ios2.jpg)
+![alt text](/showcase/ios3.jpg)
+![alt text](/showcase/ios4.jpg)
+![alt text](/showcase/ios5.jpg)
