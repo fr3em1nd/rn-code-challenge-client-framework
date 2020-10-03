@@ -25,6 +25,11 @@ File Structure:
 /constants/ - stores the constant and important credentials for the app.
 /hooks/ - color and resource folder
 /screens/ - frontend screens for the app.
-Here's the full video demo the app and code runthrough (https://www.youtube.com/watch?v=8J_KNY5OFd8):
+
+- Here's the full video demo the app and code runthrough: https://www.youtube.com/watch?v=8J_KNY5OFd8
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/8J_KNY5OFd8/0.jpg)](https://www.youtube.com/watch?v=8J_KNY5OFd8)
+
+- Followup video demo for Android: https://www.youtube.com/watch?v=AJNpDvSDEPk
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/AJNpDvSDEPk/0.jpg)](https://www.youtube.com/watch?v=AJNpDvSDEPk)
