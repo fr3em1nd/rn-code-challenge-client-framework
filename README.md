@@ -1,16 +1,10 @@
 # rn-code-challenge-client-framework
 Code Challenge | Client Framework
 by Solomon Monotilla 
-
-This is a code challenge.
  
-
 GOAL and Note for this challenge:
 
 Build a simple application with Flutter or React Native and then demonstrate it running natively in iOS, Android, and in a web browser. 
-
-[NOTE: You will have already been assigned the appropriate framework to use: Flutter vs. React Native.]
-
 
 
 Technoloy used:
@@ -33,3 +27,9 @@ File Structure:
 - Followup video demo for Android: https://www.youtube.com/watch?v=AJNpDvSDEPk
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/AJNpDvSDEPk/0.jpg)](https://www.youtube.com/watch?v=AJNpDvSDEPk)
+
+
+
+To test this both android and iOS the expo link is located here:
+https://exp.host/@fr3em1nd/rn-code-challenge-client-framework
+
