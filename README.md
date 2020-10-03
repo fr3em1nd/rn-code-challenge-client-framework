@@ -29,7 +29,20 @@ File Structure:
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/AJNpDvSDEPk/0.jpg)](https://www.youtube.com/watch?v=AJNpDvSDEPk)
 
 
+Here's the direct link to expo: https://exp.host/@fr3em1nd/rn-code-challenge-client-framework
+To test this the latest build and to open with an Android or iOS phone, you can scan this QR code with your Expo mobile app:
+![alt text](/showcase/expo_qr.png)
 
-To test this both android and iOS the expo link is located here:
-https://exp.host/@fr3em1nd/rn-code-challenge-client-framework
 
+
+Android Screenshots:
+![alt text](/showcase/android1.png)
+![alt text](/showcase/android2.png)
+![alt text](/showcase/android3.png)
+
+iOS Screenshots
+![alt text](/showcase/ios1.png)
+![alt text](/showcase/ios2.png)
+![alt text](/showcase/ios3.png)
+![alt text](/showcase/ios4.png)
+![alt text](/showcase/ios5.png)
